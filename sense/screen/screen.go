@@ -11,8 +11,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	rgb565color "github.com/nathany/bobblehat/sense/screen/color"
-	"github.com/nathany/bobblehat/sense/screen/texture"
+	rgb565color "github.com/lanzafame/bobblehat/sense/screen/color"
+	"github.com/lanzafame/bobblehat/sense/screen/texture"
 )
 
 // FrameBuffer is an 8x8 texture that can draw to the LED Matrix.
