@@ -75,7 +75,7 @@ func (fb *FrameBuffer) Set(x, y int, c color.Color) {
 		fb.Texture = texture.New(8, 8)
 	}
 
-	fb.Texture.SetPixel(x, y, rgb565color.New(uint8(r>>8), uint8(g>>8), uint8(b>>8)))
+	fb.Texture.SetPixel(x, y, rgb565color.New(r>>8, g>>8, b>>8))
 }
 
 // SetImage sets the frame buffer to the provided image
@@ -83,7 +83,7 @@ func (fb *FrameBuffer) SetImage(m image.Image) {
 	for y := 0; y < 8; y++ {
 		for x := 0; x < 8; x++ {
 			r, g, b, _ := m.At(x, y).RGBA()
-			fb.Texture.SetPixel(x, y, rgb565color.New(uint8(r>>8), uint8(g>>8), uint8(b>>8)))
+			fb.Texture.SetPixel(x, y, rgb565color.New(r>>8, g>>8, b>>8))
 		}
 	}
 }

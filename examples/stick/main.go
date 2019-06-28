@@ -70,7 +70,7 @@ func main() {
 	}
 }
 
-func draw(fb *screen.FrameBuffer, a, b, m, n int, c color.Color) {
+func draw(fb *screen.FrameBuffer, a, b, m, n int, c color.Pixel565) {
 	for i := a; i < m; i++ {
 		for j := b; j < n; j++ {
 			fb.SetPixel(i, j, c)

@@ -23,9 +23,9 @@ func main() {
 	fb.SetPixel(6, 0, color.White)
 
 	// draw gradients
-	var c uint8
+	var c uint32
 	for x := 0; x < 8; x++ {
-		c = uint8((x+1)*32 - 1)
+		c = uint32((x+1)*32 - 1)
 		fb.SetPixel(x, 1, color.New(c, c, c))
 		fb.SetPixel(x, 2, color.New(c, 0, 0))
 		fb.SetPixel(x, 3, color.New(0, c, 0))
